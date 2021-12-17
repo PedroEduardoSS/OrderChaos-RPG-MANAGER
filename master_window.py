@@ -1,7 +1,7 @@
 import dearpygui.dearpygui as dpg
 
 def master_window():
-    with dpg.window(label="Master", no_close=True, pos=(0, 0)):
+    with dpg.window(label="Mestre", no_close=True, pos=(0, 0)):
         with dpg.menu_bar(label="MenuMaster"):
             dpg.add_menu_item(label="a")
             dpg.add_menu_item(label="b")

@@ -147,7 +147,7 @@ def carregar(sender, app_data):
         dpg.bind_item_theme("carregando", item_theme)
 
 def player_window():
-    with dpg.window(label="Player", width=600, no_close=True, pos=(600, 0)):
+    with dpg.window(label="Jogador", width=600, no_close=True, pos=(600, 0)):
         with dpg.tab_bar(label="MenuPlayer"):
             with dpg.tab(label="Parte 1"):
                 with dpg.group(horizontal=True):
