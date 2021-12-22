@@ -9,7 +9,7 @@ medieval, ficção-científica, super-hérois etc. **A imaginação é o limite!
 O RPG-MANAGER surgiu para facilitar o gerenciamento das campanhas e sessões,
 para mestres e jogadores.
 
-## SISTEMA
+## Sistema
 Até o momento, o sistema de jogo utilizado (existem diversos) é o *Tome of ORDER & CHAOS*,
 gratuito e criado pelos brasileiro **Felipe Caravelli** e **Filipe Silva da Rosa**,
 por ser um sistema bem simples e adaptável para qualquer história que sua imaginação
