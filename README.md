@@ -15,4 +15,4 @@ gratuito e criado pelos brasileiros **Felipe Caravelli** e **Filipe Silva da Ros
 por ser um sistema bem simples e adaptável para qualquer história que sua imaginação
 possa criar.
 
-O livro de regras se encontra na branch principal do projeto.
+O livro de regras se encontra na branch **main** do projeto.
