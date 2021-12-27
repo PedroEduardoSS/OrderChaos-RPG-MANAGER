@@ -11,7 +11,7 @@ para mestres e jogadores.
 
 ## Sistema
 Até o momento, o sistema de jogo utilizado (existem diversos) é o *Tome of ORDER & CHAOS*,
-gratuito e criado pelos brasileiro **Felipe Caravelli** e **Filipe Silva da Rosa**,
+gratuito e criado pelos brasileiros **Felipe Caravelli** e **Filipe Silva da Rosa**,
 por ser um sistema bem simples e adaptável para qualquer história que sua imaginação
 possa criar.
 
