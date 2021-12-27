@@ -15,7 +15,7 @@ def player_window():
                     with dpg.group():
                         dpg.add_input_int(label="Peso Carregado", width=125, tag="peso_carregado")
                         dpg.add_input_int(label="Capacidade", width=125, tag="capacidade")
-                        dpg.add_input_int(label="Cap. em Combate", width=125, tag="cap_combate")
+                        dpg.add_input_int(label="Capacidade em Combate", width=125, tag="cap_combate")
                         dpg.add_input_int(label="Dinheiro", width=125, tag="dinheiro")
                         dpg.add_input_int(label="Pts de XP", width=125, tag="pts_xp")
                 dpg.add_spacer()
@@ -51,7 +51,7 @@ def player_window():
                 dpg.add_separator()
                 dpg.add_spacer()
                 with dpg.group(horizontal=True):
-                    with dpg.table(label="Tests&Traits", width=375, row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
+                    with dpg.table(label="Tests&Traits", width=400, row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
                         dpg.add_table_column(label="Teste")
                         dpg.add_table_column(label="Valor")
                         dpg.add_table_column(label="Traço (+ ou -)")
@@ -222,7 +222,7 @@ def player_window():
 
             with dpg.tab(label="Parte 2"):
                 with dpg.group():
-                    dpg.add_text("História progressa")
+                    dpg.add_text("História pregressa")
                     dpg.add_input_text(width=500, height=400, multiline=True, tag="historia")
                 dpg.add_spacer()
                 dpg.add_separator()
