@@ -1,5 +1,6 @@
 # RPG-MANAGER
-Gerenciador de Role-Playing Game de mesa, para mestres e jogadores 
+Gerenciador de Role-Playing Game de mesa, para mestres e jogadores.
+O código está na branch **master**.
 
 ## Introdução
 Role-Playing Game é um tipo de jogo baseado em interpretação, onde um
