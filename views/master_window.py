@@ -2,7 +2,7 @@ import dearpygui.dearpygui as dpg
 from controllers.master import *
 
 def master_window():
-    with dpg.window(label="Mestre",width=600, pos=(0, 0)):
+    with dpg.window(label="Mestre",width=600, no_close=True, pos=(0, 0)):
         with dpg.tab_bar(label="MenuMaster"):
             with dpg.tab(label="Geral"):
                 with dpg.group():
