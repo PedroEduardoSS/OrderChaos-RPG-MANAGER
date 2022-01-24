@@ -2,7 +2,7 @@ import dearpygui.dearpygui as dpg
 from controllers.master import *
 
 def master_window():
-    with dpg.window(label="Mestre",width=600, no_close=True, pos=(0, 0)):
+    with dpg.window(label="Mestre",width=600, pos=(0, 0)):
         with dpg.tab_bar(label="MenuMaster"):
             with dpg.tab(label="Geral"):
                 with dpg.group():
@@ -14,51 +14,6 @@ def master_window():
                 dpg.add_separator()
                 dpg.add_spacer()
                 with dpg.group():
-                    dpg.add_text("Tabela de Dificuldades")
-                    with dpg.table(label="Difficulties", row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
-                        dpg.add_table_column(label="Teste", width=125, width_fixed=True)
-                        dpg.add_table_column(label="Descrição")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Força")
-                            dpg.add_text("Combate corpo-a-corpo, peso, escalar, nadar")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Resis. Física")
-                            dpg.add_text("Resistir a danos físicos, se defender")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Resis. Mental")
-                            dpg.add_text("Resistir qualquer ação que afete a mente")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Sobrevivência")
-                            dpg.add_text("Resistir elementos naturais, venenos ou químicas")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Agilidade")
-                            dpg.add_text("Iniciativa de combate, armas de curta, média e longa distância e arremessar objetos")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Destreza")
-                            dpg.add_text("Performaces corporais, esportes e conduzir veículos")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Competência")
-                            dpg.add_text("Realizar um trabalho específico (decifrar um código, destrancar uma porta)")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Criatividade")
-                            dpg.add_text("Imaginar, deduzir, investigar, rastrear, analisar, improvisar objetos ou situações")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Manipulação")
-                            dpg.add_text("Blefar, trapacear, influenciar, simular, atuar e liderar")
-                        
-                        with dpg.table_row():
-                            dpg.add_text("Sorte")
-                            dpg.add_text("Qualquer ação que não dependa da sua performance")
-                    
                     dpg.add_spacer()
                     dpg.add_text("Exemplos de ações genéricas")
                     with dpg.table(label="Example", row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
