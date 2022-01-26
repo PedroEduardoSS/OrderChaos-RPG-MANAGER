@@ -15,9 +15,9 @@ def rules_window():
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
-                dpg.add_text("Personagens de Jogador recém-criados começam\ncom dez pontos em cada um dos Atributos. Você\npode escolher retirar de um e adicionar em outro\nconforme desejar.\n\nAcima de 15 pontos, cada subsequente custará\num ponto a mais do que o anterior. Portanto,\nadicionar um décimo-sexto ponto custará 2 pontos,\no décimo-sétimo custará 3 pontos, e assim\nsucessivamente.", color=(255, 0, 0))
+                dpg.add_text("Personagens de Jogador recém-criados começam\ncom dez pontos em cada um dos Atributos. Você\npode escolher retirar de um e adicionar em outro\nconforme desejar.\n\nAcima de 15 pontos, cada subsequente custará\num ponto a mais do que o anterior. Portanto,\nadicionar um décimo-sexto ponto custará 2 pontos,\no décimo-sétimo custará 3 pontos, e assim\nsucessivamente.", bullet=True)
                 dpg.add_spacer()
-                dpg.add_text("Personagens recém-criados não devem ultrapassar\n20 pontos ou ter menos de 1 em qualquer Atributo\n10 pontos representa o valor médio de um humano\nnormal.", color=(255, 0, 0))
+                dpg.add_text("Personagens recém-criados não devem ultrapassar\n20 pontos ou ter menos de 1 em qualquer Atributo\n10 pontos representa o valor médio de um humano\nnormal.", bullet=True)
                 dpg.add_spacer()
                 dpg.add_text("Os Atributos são:")
                 dpg.add_text("Vigor (VIG)\nExemplos: Força Física, Resistência, Saúde", bullet=True)
@@ -632,7 +632,80 @@ def rules_window():
                         dpg.add_text("2Kg")
 
             with dpg.tab(label="Combate"):
-                dpg.add_text("")
+                dpg.add_text("A mecânica mais complexa e importante do Sistema O&C.\nDependendo do contexto, a narrativa sempre tomará precedência\nsobre uma situação de combate.", bullet=True)
+                dpg.add_spacer()
+                dpg.add_separator()
+                dpg.add_spacer()
+                dpg.add_text("Pontos de Vida (PdV): Vida do jogador. Se for = 0, o personagem está morto.\nCálculo = 2 x Vigor + Domínio.", bullet=True)
+                dpg.add_text("Pontos de Energia (PdE): Recurso especial e/ou mágico. Uma vez zerado,\no personagem entrará em Estado de\nCansaço, sofrendo penalidades em todos Testes que\nenvolvem combate ou danos aos PdV até que um ponto\nde PdE seja recuperado.\nCálculo = Inteligência + Percepção + Domínio.", bullet=True)
+                dpg.add_text("Pontos de Armadura (PdA): Todos os Itens & Equipamentos equipados.\nQuando o alvo é atingido, metade do dano\nserá consumido pela PdA e a outra pela PdV.\nSe o dano for menor que a metade da PdA, o dano consumirá\ntoda a PdA.", bullet=True)
+
+                dpg.add_text("Acerto Crítico: Ação ou Retaliação com resultado do 1d20 = 20,\nignora o PdA.", bullet=True)
+                dpg.add_text("Falha Crítica: Ação ou Retaliação com resultado do 1d20 = 1,\nocorre a Falha Crítica O Mestre deverá descrever a ação \ndentro do pior contexto possível e aplicar o Cálculo de Dano\nda Ação do personagem contra ele mesmo, com a Absorção\nde Dano equivalente a uma falha em Esquivar.", bullet=True)
+
+                dpg.add_text("Cálculo de Dano")
+                with dpg.table(label="CalcDano", header_row=False, row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
+                    dpg.add_table_column()
+                    dpg.add_table_column()
+
+                    with dpg.table_row():
+                        dpg.add_text("Armas corpo-a-corpo/a distância")
+                        dpg.add_text("Valor obtido na Ação + Modificador de Dano")
+
+                    with dpg.table_row():
+                        dpg.add_text("Sem armas")
+                        dpg.add_text("Valor obtido na Ação")
+
+                    with dpg.table_row():
+                        dpg.add_text("Uso de Magia/Habilidade Especial")
+                        dpg.add_text("Valor obtido na Ação + quantidade de PdE usado")
+
+                dpg.add_text("Absorção de Dano")
+                with dpg.table(label="AbsDano", header_row=False, row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
+                    dpg.add_table_column()
+                    dpg.add_table_column()
+
+                    with dpg.table_row():
+                        dpg.add_text("Fora de Combate")
+                        dpg.add_text("1d20 + Resistência Física vs. dano estipulado pelo Mestre")
+
+                    with dpg.table_row():
+                        dpg.add_text("Reação de Defender OU situação sem chance de esquiva ou defesa")
+                        dpg.add_text("1d20 + Resistência Física vs. Cálculo de Dano")
+
+                    with dpg.table_row():
+                        dpg.add_text("Reação de Esquivar (no caso de falha)")
+                        dpg.add_text("Resistência Física vs. Cálculo de Dano")
+
+                    with dpg.table_row():
+                        dpg.add_text("Reação de não Esquivar/Defender (Retaliação garantida)")
+                        dpg.add_text("Resistência Física vs. Cálculo de Dano")
+
+                dpg.add_spacer()
+                dpg.add_separator()
+                dpg.add_spacer()
+                dpg.add_text("Turnos de combate:")
+                dpg.add_text("[1] Iniciativa: 1d20 + Agilidade e ordem decrescente", bullet=True)
+                dpg.add_text("[2] Ação: O Jogador/NPC descreve a ação e realiza o\nrespectivo teste", bullet=True)
+                dpg.add_text("[3] Reação: Quem recebe a Ação descreve sua Reação\n(Esquivar = 1d20 + Agilidade ou Defender = 1d20 + Res. Física", bullet=True)
+                dpg.add_text("[4a] Efeito da Ação: Se o teste da Ação > Reação,\nentão aplica o Cálculo de Dano vs. Absorção de Dano", bullet=True)
+                dpg.add_text("[4b] Retaliação: Quando o Jogador/NPC decidir receber\no golpe diretamente (Leia o livro para mais informações)", bullet=True)
+                dpg.add_text("[5] Fim de Turno: Recomeço de outra rodada, exceto\nquando o personagem perde a chance de retaliação com o resultado <= 11", bullet=True)
 
             with dpg.tab(label="Magias & Habilidades Especiais"):
-                pass
+                dpg.add_text("As Magias & Habilidades Especiais diferenciam \npersonagens em relação ao seu grupo e os que habitam\no universo da campanha. Podem ser interpretadas ou\nreconhecidas de formas diferentes, podendo ser mais ou\nmenos acessíveis de acordo com o contexto ou realismo da\nhistória da campanha que será jogada.", bullet=True)
+                dpg.add_spacer()
+                dpg.add_separator()
+                dpg.add_spacer()
+                dpg.add_text("Qualquer Magia ou Habilidade Especial utilizará Pontos \nde Energia, onde a quantia gasta indicará a potência da\nmesma.", bullet=True)
+                dpg.add_text("Magias & Habilidades Especiais utilizam o Teste de\nCompetência, portanto personagens que possuem altas\npontuações em Habilidade e Inteligência possuem natural\nvantagem no exercício delas. Cada vez que utilizadas, o\nusuário deverá rolar o dado duas vezes (2d20), onde apenas\no maior resultado deverá ser somado ao Teste performado.", bullet=True)
+                dpg.add_text("Existem talentos e poderes que não necessariamente\nse encaixam no que conhecemos por “magia”. Nesta\ncategoria, podemos incluir qualquer tipo de Ação que pode\nser considerada especial dentro do contexto da aventura.", bullet=True)
+                dpg.add_spacer()
+                dpg.add_text("Tipos de Magia + Exemplos (Leia o Livro para maiores informações):")
+                dpg.add_text("Encantamentos & Maldições\n(Objetos, Animais, Plantas, Sencientes)", bullet=True)
+                dpg.add_text("Abjuração\n(Anulação, Cura, Barreira Espiritual, Absorção/Exaustão)", bullet=True)
+                dpg.add_text("Alquimia\n(Elixir de Cura, Veneno, Antídoto, Pó da Invisibilidade)", bullet=True)
+                dpg.add_text("Transmutação\n(Transformação bestial/corpórea, Transfiguração,\nIlusão material, Réplica)", bullet=True)
+                dpg.add_text("Translocação\n(Teleporte, Troca de Corpo, Telecinese, Projeção Astral)", bullet=True)
+                dpg.add_text("Conjuração\n(Fogo, Ar, Água, Terra, Eletricidade, Natureza, Metal,\nLuz, Trevas)", bullet=True)
+                dpg.add_text("Mentalização\n(Telepatia, Clarividência, Controle Mental, Psicometria)", bullet=True)
