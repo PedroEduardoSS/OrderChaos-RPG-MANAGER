@@ -5,10 +5,11 @@ def rules_window():
         with dpg.tab_bar(label="MenuRules"):
             with dpg.tab(label="Sistema"):
                 dpg.add_text("Nessa janela você verá o resumo dos principais tópicos\ndo sistema para te auxiliar.", bullet=True)
+                dpg.add_text("Leia o livro oficial para ter as informações completas.", bullet=True, color=(255, 0, 0))
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
-                dpg.add_text("Esse software utiliza o sistema de RPG Order & Chaos,\npois é um sistema flexível e você poderá adaptar todas\nas histórias que sua imaginação permitir!\nLeia o livro oficial para ter as informações completas.")
+                dpg.add_text("Esse software utiliza o sistema de RPG Order & Chaos,\npois é um sistema flexível e você poderá adaptar todas\nas histórias que sua imaginação permitir!")
 
             with dpg.tab(label="Atributos"):
                 dpg.add_text("Os Atributos são os pilares fundamentais para a construção\ndo seu personagem.", bullet=True)
@@ -32,7 +33,7 @@ def rules_window():
                 dpg.add_separator()
                 dpg.add_spacer()
 
-                dpg.add_text("Tabela de Dificuldades")
+                dpg.add_text("Tabela de Dificuldades", bullet=True)
                 with dpg.table(label="Difficulties", row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
                     dpg.add_table_column(label="Teste", width=200, width_fixed=True)
                     dpg.add_table_column(label="Descrição")
@@ -78,7 +79,7 @@ def rules_window():
                         dpg.add_text("Qualquer ação que não dependa da sua performance")
 
                 dpg.add_spacer()
-                dpg.add_text("Exemplos de ações genéricas")
+                dpg.add_text("Exemplos de ações genéricas", bullet=True)
                 with dpg.table(label="Example", row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
                     dpg.add_table_column(label="Ação")
                     dpg.add_table_column(label="Dificuldade")
@@ -643,7 +644,7 @@ def rules_window():
                 dpg.add_text("Acerto Crítico: Ação ou Retaliação com resultado do 1d20 = 20,\nignora o PdA.", bullet=True)
                 dpg.add_text("Falha Crítica: Ação ou Retaliação com resultado do 1d20 = 1,\nocorre a Falha Crítica O Mestre deverá descrever a ação \ndentro do pior contexto possível e aplicar o Cálculo de Dano\nda Ação do personagem contra ele mesmo, com a Absorção\nde Dano equivalente a uma falha em Esquivar.", bullet=True)
 
-                dpg.add_text("Cálculo de Dano")
+                dpg.add_text("Cálculo de Dano", bullet=True)
                 with dpg.table(label="CalcDano", header_row=False, row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
                     dpg.add_table_column()
                     dpg.add_table_column()
@@ -660,7 +661,7 @@ def rules_window():
                         dpg.add_text("Uso de Magia/Habilidade Especial")
                         dpg.add_text("Valor obtido na Ação + quantidade de PdE usado")
 
-                dpg.add_text("Absorção de Dano")
+                dpg.add_text("Absorção de Dano", bullet=True)
                 with dpg.table(label="AbsDano", header_row=False, row_background=False, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
                     dpg.add_table_column()
                     dpg.add_table_column()
