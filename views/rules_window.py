@@ -1,7 +1,7 @@
 import dearpygui.dearpygui as dpg
 
 def rules_window():
-    with dpg.window(label="Regras", width=700, pos=(0, 0)):
+    with dpg.window(label="Regras", width=1000, pos=(0, 20)):
         with dpg.tab_bar(label="MenuRules"):
             with dpg.tab(label="Sistema"):
                 dpg.add_text("Nessa janela você verá o resumo dos principais tópicos\ndo sistema para te auxiliar.", bullet=True)
