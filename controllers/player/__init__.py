@@ -120,7 +120,8 @@ def salvar(sender, app_data):
     "item9": dpg.get_value("item9"),
     "historia": dpg.get_value("historia"),
     "notas": dpg.get_value("notas"),
-    "descricao_fisica": dpg.get_value("descricao_fisica")}
+    "descricao_fisica": dpg.get_value("descricao_fisica"),
+    "imagem": dpg.get_value("imagem")}
     with open("models/player.json", "w") as file:
         json.dump(dict, file, indent=4)
     with dpg.window(label="Salvando", tag="salvando", width=150, height=20, pos=(500, 300), popup=True, modal=True, no_title_bar=True):
@@ -137,6 +138,9 @@ def carregar(sender, app_data):
         dict = json.load(file)
         for k, v in dict.items():
             dpg.configure_item(k, default_value=v)
+            if k == "imagem":
+                carregar_imagem()
+
     with dpg.window(label="Carregando", tag="carregando", width=150, height=20, pos=(500, 300), popup=True, modal=True, no_title_bar=True):
         dpg.add_text("Arquivo carregado!")
         dpg.add_button(label="Fechar", callback=lambda: dpg.delete_item("carregando"))
@@ -145,3 +149,10 @@ def carregar(sender, app_data):
                 dpg.add_theme_color(dpg.mvThemeCol_ModalWindowDimBg, (89, 89, 89), category=dpg.mvThemeCat_Core)
 
         dpg.bind_item_theme("carregando", item_theme)
+
+def carregar_imagem():
+    img = dpg.get_value("imagem")
+    width, height, channels, data = dpg.load_image(img)
+    with dpg.texture_registry() as registry:
+        img = dpg.add_static_texture(width, height, data, tag="texture_tag")
+    dpg.add_image("texture_tag" , tag="adicionar", width=350, height=400, parent="parent")

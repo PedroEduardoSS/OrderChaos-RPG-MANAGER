@@ -221,9 +221,15 @@ def player_window():
                             dpg.add_input_int(tag="peso17")
 
             with dpg.tab(label="Parte 2"):
-                with dpg.group():
-                    dpg.add_text("História pregressa")
-                    dpg.add_input_text(width=500, height=400, multiline=True, tag="historia")
+                with dpg.group(horizontal=True):
+                    with dpg.group():
+                        dpg.add_text("História pregressa")
+                        dpg.add_input_text(width=500, height=500, multiline=True, tag="historia")
+                    with dpg.group(tag="parent"):
+                        dpg.add_text("Nome do arquivo da imagem")
+                        dpg.add_input_text(tag="imagem", hint="Cuidado! Você pode adicionar\nAPENAS UMA imagem!", width=350)
+                        dpg.add_button(label="Adicionar", callback=carregar_imagem)
+
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
