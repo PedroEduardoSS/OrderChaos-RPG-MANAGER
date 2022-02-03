@@ -292,7 +292,7 @@ def player_window():
                         dpg.add_input_text(width=500, height=500, multiline=True, tag="historia")
                     with dpg.group(tag="parent"):
                         dpg.add_text("Nome do arquivo da imagem")
-                        dpg.add_input_text(tag="imagem", hint="Cuidado! Você pode adicionar\nAPENAS UMA imagem!", width=350)
+                        dpg.add_input_text(tag="imagem", hint="Cuidado! Você pode adicionar APENAS UMA imagem!", width=350)
                         dpg.add_button(label="Adicionar", callback=carregar_imagem)
 
                 dpg.add_spacer()

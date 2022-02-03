@@ -12,7 +12,7 @@ if sys.platform == "win32":
 
 setup(
     name = "RPG - MANAGER",
-    version = "0.1",
+    version = "1.0",
     description = "Gererenciador de Role-Playing Game",
     options = {"build_exe": build_exe_options},
     executables = [Executable("main.py", icon="icon.ico", base=base)]
