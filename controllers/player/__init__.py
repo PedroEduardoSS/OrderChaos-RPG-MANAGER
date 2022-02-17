@@ -134,13 +134,6 @@ def salvar(sender, app_data):
         dpg.bind_item_theme("salvando", item_theme)
 
 def carregar(sender, app_data):
-    with open("models/player.json", "r") as file:
-        dict = json.load(file)
-        for k, v in dict.items():
-            dpg.configure_item(k, default_value=v)
-            if k == "imagem":
-                carregar_imagem()
-
     with dpg.window(label="Carregando", tag="carregando", width=150, height=20, pos=(500, 300), popup=True, modal=True, no_title_bar=True):
         dpg.add_text("Arquivo carregado!")
         dpg.add_button(label="Fechar", callback=lambda: dpg.delete_item("carregando"))
@@ -149,6 +142,11 @@ def carregar(sender, app_data):
                 dpg.add_theme_color(dpg.mvThemeCol_ModalWindowDimBg, (89, 89, 89), category=dpg.mvThemeCat_Core)
 
         dpg.bind_item_theme("carregando", item_theme)
+    with open("models/player.json", "r") as file:
+        dict = json.load(file)
+        for k, v in dict.items():
+            dpg.configure_item(k, default_value=v)
+            if k == "imagem": carregar_imagem()
 
 def carregar_imagem():
     img = dpg.get_value("imagem")
