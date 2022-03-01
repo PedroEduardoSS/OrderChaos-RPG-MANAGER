@@ -17,3 +17,8 @@ por ser um sistema bem simples e adaptável para qualquer história que sua imag
 possa criar. Visite o [site oficial](https://www.ordernchaos.com.br/).
 
 O livro de regras se encontra na branch **main** do projeto ou no próprio site.
+
+## Versão 1.1
+- O jogador pode adicionar imagem do seu personagem;
+- Tela com o resumo das regras;
+- Cálculos automatizados.
