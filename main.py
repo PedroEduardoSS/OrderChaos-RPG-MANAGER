@@ -34,8 +34,21 @@ def perfil():
 
 with dpg.window(tag="Primary Window"):
     with dpg.menu_bar():
-        dpg.add_menu_item(label="Regras Gerais", callback=lambda: rules_window())
-        dpg.add_menu_item(label="Mestre/Jogador", callback=lambda: perfil())
+        mi1 = dpg.add_menu_item(label="Regras Gerais", callback=lambda: rules_window())
+        mi2 = dpg.add_menu_item(label="Mestre/Jogador", callback=lambda: perfil())
+
+with dpg.theme() as global_theme:
+    with dpg.theme_component(dpg.mvAll):
+        dpg.add_theme_color(dpg.mvThemeCol_TitleBgActive, (204, 0, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_Border, (204, 0, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_MenuBarBg, (210, 0, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_Tab, (204, 0, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_TabActive, (230, 184, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_Button, (230, 184, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_HeaderHovered, (230, 184, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_style(dpg.mvStyleVar_FrameRounding, 5, category=dpg.mvThemeCat_Core)
+
+dpg.bind_theme(global_theme)
 
 if __name__ == "__main__":
     dpg.show_viewport()
