@@ -21,7 +21,7 @@ def perfil():
         dpg.add_static_texture(width1, height1, data1, tag="mestre_img")
         dpg.add_static_texture(width2, height2, data2, tag="jogador_img")
 
-    with dpg.window(label="Início", width=400, height=250, pos=(400,100), collapsed=False):
+    with dpg.window(label="Início", width=400, height=250, pos=(400,100), collapsed=False, no_close=True):
         with dpg.group(width=190, horizontal=True):
             with dpg.group():
                 dpg.add_image("mestre_img", width=150, height=150)
@@ -44,6 +44,7 @@ with dpg.theme() as global_theme:
         dpg.add_theme_color(dpg.mvThemeCol_MenuBarBg, (210, 0, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_color(dpg.mvThemeCol_Tab, (204, 0, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_color(dpg.mvThemeCol_TabActive, (230, 184, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_TabHovered, (179, 143, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_color(dpg.mvThemeCol_Button, (230, 184, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_color(dpg.mvThemeCol_HeaderHovered, (230, 184, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_style(dpg.mvStyleVar_FrameRounding, 5, category=dpg.mvThemeCat_Core)
