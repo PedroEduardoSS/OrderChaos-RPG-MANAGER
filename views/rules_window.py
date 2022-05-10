@@ -4,7 +4,7 @@ def rules_window():
     with dpg.window(label="Regras", width=1000, pos=(0, 20)):
         with dpg.tab_bar(label="MenuRules"):
             with dpg.tab(label="Sistema"):
-                dpg.add_text("Nessa janela você verá o resumo dos principais tópicos\ndo sistema para te auxiliar.", bullet=True)
+                dpg.add_text("Nessa janela você verá o resumo dos principais tópicos\ndo sistema para te auxiliar.")
                 dpg.add_text("Leia o livro oficial para ter as informações completas.", bullet=True, color=(255, 0, 0))
                 dpg.add_spacer()
                 dpg.add_separator()
@@ -12,7 +12,7 @@ def rules_window():
                 dpg.add_text("Esse software utiliza o sistema de RPG Order & Chaos,\npois é um sistema flexível e você poderá adaptar todas\nas histórias que sua imaginação permitir!")
 
             with dpg.tab(label="Atributos"):
-                dpg.add_text("Os Atributos são os pilares fundamentais para a construção\ndo seu personagem.", bullet=True)
+                dpg.add_text("Os Atributos são os pilares fundamentais para a construção\ndo seu personagem.")
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
@@ -28,7 +28,7 @@ def rules_window():
                 dpg.add_text("Domínio (DOM)\nExemplos: Como se utiliza recursos físicos,\nmentais e sociais", bullet=True)
 
             with dpg.tab(label="Testes"):
-                dpg.add_text("Os Testes são ações realizadas pelo Mestre e os\njogadores que possuem alguma dificuldade.", bullet=True)
+                dpg.add_text("Os Testes são ações realizadas pelo Mestre e os\njogadores que possuem alguma dificuldade.")
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
@@ -136,7 +136,7 @@ def rules_window():
                         dpg.add_text("Competência")
 
             with dpg.tab(label="Características"):
-                dpg.add_text("Etapa fundamental para Mestres e jogadores.", bullet=True)
+                dpg.add_text("Etapa fundamental para Mestres e jogadores.")
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
@@ -356,7 +356,7 @@ def rules_window():
                 dpg.add_text("História pregressa: Na Ficha de Personagem, você deve escrever a\nhistória do seu personagem antes da campanha.", bullet=True)
 
             with dpg.tab(label="Itens & Equipamentos"):
-                dpg.add_text("Os Itens e os Equipamentos podem ter múltiplas serventias dentro da campanha.", bullet=True)
+                dpg.add_text("Os Itens e os Equipamentos podem ter múltiplas serventias dentro da campanha.")
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
@@ -633,7 +633,7 @@ def rules_window():
                         dpg.add_text("2Kg")
 
             with dpg.tab(label="Combate"):
-                dpg.add_text("A mecânica mais complexa e importante do Sistema O&C.\nDependendo do contexto, a narrativa sempre tomará precedência\nsobre uma situação de combate.", bullet=True)
+                dpg.add_text("A mecânica mais complexa e importante do Sistema O&C.\nDependendo do contexto, a narrativa sempre tomará precedência\nsobre uma situação de combate.")
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
@@ -694,7 +694,7 @@ def rules_window():
                 dpg.add_text("[5] Fim de Turno: Recomeço de outra rodada, exceto\nquando o personagem perde a chance de retaliação com o resultado <= 11", bullet=True)
 
             with dpg.tab(label="Magias & Habilidades Especiais"):
-                dpg.add_text("As Magias & Habilidades Especiais diferenciam \npersonagens em relação ao seu grupo e os que habitam\no universo da campanha. Podem ser interpretadas ou\nreconhecidas de formas diferentes, podendo ser mais ou\nmenos acessíveis de acordo com o contexto ou realismo da\nhistória da campanha que será jogada.", bullet=True)
+                dpg.add_text("As Magias & Habilidades Especiais diferenciam \npersonagens em relação ao seu grupo e os que habitam\no universo da campanha. Podem ser interpretadas ou\nreconhecidas de formas diferentes, podendo ser mais ou\nmenos acessíveis de acordo com o contexto ou realismo da\nhistória da campanha que será jogada.")
                 dpg.add_spacer()
                 dpg.add_separator()
                 dpg.add_spacer()
