@@ -4,7 +4,7 @@ from views.player_window import *
 from views.rules_window import *
 
 dpg.create_context()
-dpg.create_viewport(title='RPG - Manager', width=1200, height=720, small_icon="icon.ico", large_icon="icon.ico")
+dpg.create_viewport(title='Tome of Order & Chaos RPG - Manager', width=1200, height=720, small_icon="icon.ico", large_icon="icon.ico")
 dpg.setup_dearpygui()
 
 def confirmar_1():
