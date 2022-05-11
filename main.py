@@ -46,6 +46,7 @@ with dpg.theme() as global_theme:
         dpg.add_theme_color(dpg.mvThemeCol_TabActive, (230, 184, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_color(dpg.mvThemeCol_TabHovered, (179, 143, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_color(dpg.mvThemeCol_Button, (230, 184, 0), category=dpg.mvThemeCat_Core)
+        dpg.add_theme_color(dpg.mvThemeCol_ButtonHovered, (179, 143, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_color(dpg.mvThemeCol_HeaderHovered, (230, 184, 0), category=dpg.mvThemeCat_Core)
         dpg.add_theme_style(dpg.mvStyleVar_FrameRounding, 5, category=dpg.mvThemeCat_Core)
 
